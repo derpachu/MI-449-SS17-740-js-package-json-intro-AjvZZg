@@ -9,11 +9,10 @@
     "dev:sass": "node-sass source/scss/style.scss --watch --output=compiled/css --output-style=compressed --source-map=true",
     "dev": "run-p dev:*",
     "lint:html": "htmlhint",
-    "lint:scss": "stylelint *.css",
     "lint:scss": "stylelint source/scss/*.scss",
     "lint:js": "standard",
-    "build:server": "git push origin master",
     "build:sass": "node-sass source/scss/style.scss --output=compiled/css --output-style=compressed --source-map=true",
+    "deploy:github": "git push origin master",
     "deploy:surge": "surge --project . --domain https://tangjos1-kg-tgc7noax99ajvzzg.surge.sh/",
     "deploy": "run-s lint:* build:* deploy:surge"
   },
